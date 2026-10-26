@@ -6,4 +6,8 @@ const createPost = async (data) => {
   });
 };
 
-module.exports = { createPost };
+const listPosts = async () => {
+  return await prisma.post.findMany();
+};
+
+module.exports = { createPost, listPosts };
